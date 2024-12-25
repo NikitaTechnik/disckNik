@@ -1,0 +1,875 @@
+/* Сброс стилей и базовая настройка */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e67e22;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Основное содержимое */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Секция команды */
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Карточка участника */
+.team-member {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.1);
+}
+
+.member-details {
+  flex: 1;
+}
+
+.member-details h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.member-details p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Секция контактной информации */
+.contact {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact p strong {
+  color: #e67e22;
+}
+
+/* Стиль для новых блоков */
+.disk-info {
+  padding: 40px 20px;
+  background-color: #fff;
+  margin-top: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.disk-info h2 {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.disk-block {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.disk-block:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.disk-block h3 {
+  font-size: 1.6em;
+  color: #333;
+  flex: 1;
+  font-weight: 600;
+}
+
+.disk-block p {
+  font-size: 1.1em;
+  color: #555;
+  flex: 2;
+}
+
+.disk-img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.disk-img:hover {
+  transform: scale(1.05);
+}
+
+/* Респонсивность для мобильных */
+@media (max-width: 768px) {
+  .team-member {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .team-photo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+  }
+
+  .disk-block {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .disk-img {
+      margin-top: 10px;
+  }
+}
+
+/* Прочие улучшения */
+button.btn {
+  padding: 12px 30px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #d35400;
+  transform: translateY(-3px);
+}
+
+/* Для раздела цен */
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.price-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.price-item h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.price-item p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.price-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .price-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .price-item {
+      width: 90%;
+  }
+}
+/* Основные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e67e22;
+}
+
+/* Главная секция с продуктами */
+main {
+  padding: 40px 20px;
+}
+
+.product-list h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-list p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Сетка для дисков */
+.disk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.disk-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+}
+
+.disk-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.disk-item h2 {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Hover эффекты */
+.disk-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.disk-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 40px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .product-list h1 {
+    font-size: 2.5em;
+  }
+
+  .disk-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .product-list h1 {
+    font-size: 2em;
+  }
+
+  .product-list p {
+    font-size: 1em;
+  }
+}
+
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header .logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+main {
+  padding: 20px;
+}
+
+.product-list h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.product-list p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.disk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.disk-item {
+  text-align: center;
+}
+
+.disk-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.disk-item h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  nav ul {
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .product-list h1 {
+    font-size: 1.8em;
+  }
+
+  .product-list p {
+    font-size: 1em;
+  }
+
+  .disk-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .disk-item h2 {
+    font-size: 1em;
+  }
+}
+
+/* Стили для маленьких экранов */
+@media (max-width: 480px) {
+  header .logo img {
+    max-width: 150px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .product-list h1 {
+    font-size: 1.5em;
+  }
+
+  .disk-item img {
+    max-width: 100%;
+  }
+}
+
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* светлый серый */
+  color: #333; /* темно-серый текст */
+}
+
+header {
+  background-color: #003366; /* тёмно-синий */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header .logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0066cc; /* синий при наведении */
+}
+
+main {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-list h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #003366; /* синий */
+}
+
+.product-list p {
+  text-align: center;
+  color: #666; /* серый текст */
+}
+
+.disk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.disk-item {
+  text-align: center;
+  background-color: #ffffff; /* белый фон карточки */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disk-item:hover {
+  transform: translateY(-5px); /* небольшой подъем при наведении */
+  box-shadow: 0 0 20px rgba(0, 102, 204, 0.3); /* синий акцент */
+}
+
+.disk-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.disk-item h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+footer {
+  background-color: #003366; /* тёмно-синий */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  nav ul {
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .product-list h1 {
+    font-size: 1.8em;
+  }
+
+  .product-list p {
+    font-size: 1em;
+  }
+
+  .disk-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .disk-item h2 {
+    font-size: 1em;
+  }
+}
+
+/* Стили для маленьких экранов */
+@media (max-width: 480px) {
+  header .logo img {
+    max-width: 150px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .product-list h1 {
+    font-size: 1.5em;
+  }
+
+  .disk-item img {
+    max-width: 100%;
+  }
+}
+
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* светлый серый фон */
+  color: #333; /* темно-серый текст */
+}
+
+header {
+  background-color: #003366; /* тёмно-синий */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0066cc; /* синий при наведении */
+}
+
+main.product-detail {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail h1 {
+  font-size: 2.5em;
+  color: #003366; /* синий заголовок */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+}
+
+.product-details {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.product-details p {
+  margin-bottom: 15px;
+}
+
+.product-details p strong {
+  color: #0066cc; /* синий для важных элементов */
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #0066cc; /* синий заголовок для цены */
+  margin-top: 20px;
+}
+
+button.btn {
+  display: block;
+  width: 200px;
+  padding: 12px;
+  background-color: #0066cc; /* синий фон кнопки */
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #004d99; /* темный синий при наведении */
+}
+
+footer {
+  background-color: #003366; /* тёмно-синий */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .product-detail h1 {
+      font-size: 2em;
+  }
+
+  .product-image {
+      max-width: 90%;
+  }
+
+  .product-details {
+      font-size: 1.1em;
+  }
+
+  button.btn {
+      width: 180px;
+      font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail {
+      padding: 15px;
+  }
+
+  .product-image {
+      max-width: 100%;
+  }
+
+  button.btn {
+      width: 160px;
+      font-size: 1em;
+  }
+}
